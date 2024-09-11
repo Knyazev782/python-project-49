@@ -1,12 +1,11 @@
 import random
 import math
 import operator
+from brain_games.scripts.cli import welcome_user
 
-print('May I have your name? ', end='')
-name = input("Enter your name: ")
-print(f"Hello, {name}!")
 
 def calc():
+    name = welcome_user()
     for i in range(3):
         numb_1 = random.randint(1, 5)
         numb_2 = random.randint(1, 5)
@@ -29,5 +28,9 @@ def calc():
     print(f'Congratulations, {name}!')
 
 
+def main():
+    print('Welcome to the Brain Games!')
+    calc()
 
-calc()
+if __name__ == "__main__":
+    main()
