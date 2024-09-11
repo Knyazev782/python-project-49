@@ -2,6 +2,11 @@ import math
 import random
 
 
+print('May I have your name? ', end='')
+name = input("Enter your name: ")
+print(f"Hello, {name}!")
+
+
 print('Find the greatest common divisor of given numbers.')
 def gcd():
     for i in range(3):
@@ -13,8 +18,8 @@ def gcd():
         if player_answer == math.gcd(numb_1, numb_2):
             print('Correct!')
         elif player_answer != math.gcd(numb_1, numb_2):
-            print(f"'{player_answer}' is a wrong answer ;(. Correct answer was '{math.gcd(numb_1, numb_2)}'\nLet's try again, NAME!")
+            print(f"'{player_answer}' is a wrong answer ;(. Correct answer was '{math.gcd(numb_1, numb_2)}'\nLet's try again, {name}!")
             return
-    print('Congratulations!')
+    print(f'Congratulations {name}!')
 
 gcd()

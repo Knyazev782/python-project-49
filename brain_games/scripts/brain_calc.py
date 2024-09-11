@@ -2,6 +2,10 @@ import random
 import math
 import operator
 
+print('May I have your name? ', end='')
+name = input("Enter your name: ")
+print(f"Hello, {name}!")
+
 def calc():
     for i in range(3):
         numb_1 = random.randint(1, 5)
@@ -19,13 +23,10 @@ def calc():
             correct_answer = math.prod([numb_1, numb_2])
         if player_answer == correct_answer:
             print('Correct!')
-        # elif player_answer == str(player_answer):
-        #     print('Error!')
-        #     return
         elif player_answer != correct_answer:
-            print(f"'{player_answer}' is a wrong answer ;(. The correct answer was '{correct_answer}'. \nLet's try again, NAME!")
+            print(f"'{player_answer}' is a wrong answer ;(. The correct answer was '{correct_answer}'. \nLet's try again, {name}!")
             return
-    print('Congratulations, NAME!')
+    print(f'Congratulations, {name}!')
 
 
 

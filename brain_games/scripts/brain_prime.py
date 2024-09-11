@@ -1,6 +1,12 @@
 import random
 import math
 
+
+print('May I have your name? ', end='')
+name = input("Enter your name: ")
+print(f"Hello, {name}!")
+
+
 print('Answer "yes" if given number is prime. Otherwise answer "no".')
 
 
@@ -21,9 +27,9 @@ def prime_game():
         if player_answer == correct_answer:
             print("Correct!")
         else:
-            print(f'"{player_answer}" is wrong answer ;(. Correct answer was "{correct_answer}"')
+            print(f"'{player_answer}' is a wrong answer ;(. Correct answer was '{correct_answer}'\nLet's try again, {name}!")
             return
-    print('Congratulations!')
+    print(f'Congratulations {name}!')
 prime_game()
 
 

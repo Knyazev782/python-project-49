@@ -12,7 +12,6 @@ def task():
     for i in range(3):
         loose_1 = f"'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, {name}!"
         loose_2 = f"'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {name}!"
-        winner = "Congratulations, "f'{name}!
         question = random.randint(1, 100)
         numb =int(f"{question}")
         print("Question: " + f"{numb}")
@@ -25,7 +24,7 @@ def task():
         elif (numb % 2) != 0 and player_answer == 'yes':
             print(loose_2)
             return
-    print(winner)
+    print(f"Congratulations, {name}!")
     return
 
 # conditions()
