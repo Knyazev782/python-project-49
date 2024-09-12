@@ -6,6 +6,3 @@ def welcome_user():
     name = input()
     print(f"Hello, {name}"'!')
     return name
-
-
-
