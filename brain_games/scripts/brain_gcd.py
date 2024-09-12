@@ -17,7 +17,7 @@ def gcd():
         elif player_answer != math.gcd(numb_1, numb_2):
             print(f"'{player_answer}' is a wrong answer ;(. Correct answer was '{math.gcd(numb_1, numb_2)}'\nLet's try again, {name}!")
             return
-    print(f'Congratulations {name}!')
+    print(f'Congratulations, {name}!')
 
 def main():
     print('Welcome to the Brain Games!')
