@@ -25,7 +25,7 @@ def prime_game():
         else:
             print(f"'{player_answer}' is a wrong answer ;(. Correct answer was '{correct_answer}'\nLet's try again, {name}!")
             return
-    print(f'Congratulations {name}!')
+    print(f'Congratulations, {name}!')
 
 def main():
     print('Welcome to the Brain Games!')
