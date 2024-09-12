@@ -14,8 +14,8 @@ def task():
         numb = int(f"{question}")
         print("Question: " + f"{numb}")
         player_answer = input(str('Your answer: '))
-        if ((numb % 2) == 0 and player_answer == 'yes' or
-            (numb % 2) != 0 and player_answer == 'no'):
+        if (numb % 2 == 0 and player_answer == 'yes') or \
+                (numb % 2 != 0 and player_answer == 'no'):
             print("Correct!")
         elif (numb % 2) == 0 and player_answer == 'no':
             print(loose_1)
