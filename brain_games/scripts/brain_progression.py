@@ -19,7 +19,8 @@ def arithmetic_progression():
         if player_answer == hidden_value:
             print('Correct!')
         else:
-            print(f"'{player_answer}' is a wrong answer ;(. Correct answer was '{hidden_value}'\n"
+            print(f"'{player_answer}' is a wrong answer ;(. "
+                  f"Correct answer was '{hidden_value}'\n"
                   f"Let's try again, {name}!")
             return
     print(f'Congratulations, {name}!')

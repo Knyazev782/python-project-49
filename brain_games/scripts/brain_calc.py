@@ -10,7 +10,8 @@ def operation(numb_1, operations, numb_2):
     elif operations == '-':
         return operator.sub(numb_1, numb_2)
     elif operations == '*':
-       return math.prod([numb_1, numb_2])
+        return math.prod([numb_1, numb_2])
+
 
 def calc():
     name = welcome_user()
@@ -25,14 +26,17 @@ def calc():
         if player_answer == correct_answer:
             print('Correct!')
         elif player_answer != correct_answer:
-            print(f"'{player_answer}' is a wrong answer ;(. The correct answer was '{correct_answer}'. "
+            print(f"'{player_answer}' is a wrong answer ;(. "
+                  f"The correct answer was '{correct_answer}'. "
                   f"\nLet's try again, {name}!")
             return
     print(f'Congratulations, {name}!')
 
+
 def main():
     print('Welcome to the Brain Games!')
     calc()
+
 
 if __name__ == "__main__":
     main()
