@@ -4,7 +4,7 @@ import operator
 from brain_games.scripts.cli import welcome_user
 
 
-def operation(numb_1, operations,  numb_2):
+def operation(numb_1, operations, numb_2):
     if operations == '+':
         return sum([numb_1, numb_2])
     elif operations == '-':
@@ -19,7 +19,7 @@ def calc():
         numb_1 = random.randint(1, 5)
         numb_2 = random.randint(1, 5)
         operations = random.choice(['+', '-', '*'])
-        print(f'Question:  {numb_1} {operations} {numb_2}')
+        print('Question: ' f"{numb_1} {operations} {numb_2}")
         player_answer = int(input('Your answer: '))
         correct_answer = operation(numb_1, operations, numb_2)
         if player_answer == correct_answer:
