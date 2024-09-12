@@ -6,6 +6,7 @@ from brain_games.scripts.cli import welcome_user
 
 def calc():
     name = welcome_user()
+    print('What is the result of the expression?')
     for i in range(3):
         numb_1 = random.randint(1, 5)
         numb_2 = random.randint(1, 5)

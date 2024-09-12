@@ -1,13 +1,6 @@
 import random
 import math
-
-
-print('May I have your name? ', end='')
-name = input("Enter your name: ")
-print(f"Hello, {name}!")
-
-
-print('Answer "yes" if given number is prime. Otherwise answer "no".')
+from brain_games.scripts.cli import welcome_user
 
 
 def is_prime(numb):
@@ -18,7 +11,10 @@ def is_prime(numb):
             return False
     return True
 
+
 def prime_game():
+    name = welcome_user()
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
     for i in range(3):
         numb = random.randint(1, 10)
         correct_answer = "yes" if is_prime(numb) else "no"
@@ -30,7 +26,13 @@ def prime_game():
             print(f"'{player_answer}' is a wrong answer ;(. Correct answer was '{correct_answer}'\nLet's try again, {name}!")
             return
     print(f'Congratulations {name}!')
-prime_game()
+
+def main():
+    print('Welcome to the Brain Games!')
+    prime_game()
+
+if __name__ == "__main__":
+    main()
 
 
 

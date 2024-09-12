@@ -1,14 +1,11 @@
 import math
 import random
+from brain_games.scripts.cli import welcome_user
 
 
-print('May I have your name? ', end='')
-name = input("Enter your name: ")
-print(f"Hello, {name}!")
-
-
-print('Find the greatest common divisor of given numbers.')
 def gcd():
+    name = welcome_user()
+    print('Find the greatest common divisor of given numbers.')
     for i in range(3):
         numb_1 = random.randint(1, 5)
         numb_2 = random.randint(1, 5)
@@ -22,4 +19,9 @@ def gcd():
             return
     print(f'Congratulations {name}!')
 
-gcd()
+def main():
+    print('Welcome to the Brain Games!')
+    gcd()
+
+if __name__ == "__main__":
+    main()

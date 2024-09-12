@@ -1,15 +1,10 @@
 import random
-
-
-print('May I have your name? ', end='')
-name = input("Enter your name: ")
-print(f"Hello, {name}!")
-
-
-print('What number is missing in the progression?')
+from brain_games.scripts.cli import welcome_user
 
 
 def arithmetic_progression():
+    name = welcome_user()
+    print('What number is missing in the progression?')
     for i in range(3):
         length_progression = random.randint(5,10)
         start = random.randint(0,10)
@@ -28,10 +23,12 @@ def arithmetic_progression():
             return
     print(f'Congratulations, {name}!')
 
+def main():
+    print('Welcome to the Brain Games!')
+    arithmetic_progression()
 
-
-
-arithmetic_progression()
+if __name__ == "__main__":
+    main()
 
 
 
