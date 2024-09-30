@@ -1,39 +1,10 @@
-import random
-import math
-from brain_games.scripts.cli import welcome_user
-
-
-def is_prime(numb):
-    if numb <= 1:
-        return False
-    for i in range(2, int(math.sqrt(numb)) + 1):
-        if numb % i == 0:
-            return False
-    return True
-
-
-def prime_game():
-    name = welcome_user()
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    for i in range(3):
-        numb = random.randint(1, 10)
-        correct_answer = "yes" if is_prime(numb) else "no"
-        print(f"Question: {numb}")
-        player_answer = str(input("Your answer: "))
-        if player_answer == correct_answer:
-            print("Correct!")
-        else:
-            print(f"'{player_answer}' is a wrong answer ;(. "
-                  f"Correct answer was '{correct_answer}'\n"
-                  f"Let's try again, {name}!")
-            return
-    print(f'Congratulations, {name}!')
+from brain_games.logic_games import launch_games
+from brain_games.games import brain_prime
 
 
 def main():
-    print('Welcome to the Brain Games!')
-    prime_game()
+    launch_games(brain_prime)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
