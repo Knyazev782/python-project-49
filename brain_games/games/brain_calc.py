@@ -5,7 +5,7 @@ import operator
 GAME_QUESTION = 'What is the result of the expression?'
 
 
-def get_correct_answer(numb_1,operators,numb_2):
+def get_correct_answer(numb_1, operators, numb_2):
     if operators == '+':
         return numb_1 + numb_2
     elif operators == '-':
