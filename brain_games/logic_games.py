@@ -1,6 +1,7 @@
 import prompt
 
-ROUNDS_COUNT= 3
+
+ROUNDS_COUNT = 3
 
 
 def welcome_user():
@@ -8,6 +9,7 @@ def welcome_user():
     name = prompt.string('May I have your name? ')
     print(f"Hello, {name}"'!')
     return name
+
 
 def launch_games(game):
     username = welcome_user()
@@ -26,4 +28,3 @@ def launch_games(game):
             print(f'Let\'s try again, {username}!')
             return
     print(f'Congratulations, {username}!')
-

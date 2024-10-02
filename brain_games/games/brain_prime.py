@@ -22,5 +22,3 @@ def get_game_data():
         else:
             answer = 'no'
         return question, answer
-
-
