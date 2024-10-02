@@ -16,10 +16,3 @@ def get_game_data():
         return question, str(answer)
 
 
-# def main():
-#     print('Welcome to the Brain Games!')
-#     arithmetic_progression()
-#
-#
-# if __name__ == "__main__":
-#     main()
